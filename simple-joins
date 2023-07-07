@@ -1,0 +1,33 @@
+import pandas as pd
+
+#Using merge() method, we'll do an inner join between family_ages and family_heights
+
+family_ages = pd.DataFrame({'name': ['Gisela', 'Maria', 'Camila'],
+                    'age': [35, 40, 28]})
+
+family_heights = pd.DataFrame({'name': ['Gisela', 'Camila', 'Joel'],
+                    'height': [165, 170, 185]})
+
+#Join both DFs on 'name'
+family_merged = pd.merge(family_ages, family_heights, on='name', how='inner')
+
+#Print new DF
+print(family_merged)
+
+
+#Now we'll do something similar, using the join() method. The difference is that here we grab one DF and join it to the other.
+#In the following example, we join ''medicine_cabinet_2' to 'medicine_cabinet_1', creating a new DF
+
+#First DF, with dosis of medicine (mg)
+medicine_cabinet_1 = pd.DataFrame({'mg': [600, 50, 1000]},
+                   index=['Ibuprofen', 'Diclofenac', 'Paracetamol'])
+
+#Second DF, with qty of pills
+medicine_cabinet_2 = pd.DataFrame({'qty': [10, 6, 8]},
+                   index=['Diclofenac', 'Paracetamol', 'Loratadina'])
+
+#Left join
+medicine_cabinet = medicine_cabinet_1.join(medicine_cabinet_2, how='left')
+
+#We print new DF, result of the left join
+print(medicine_cabinet)
