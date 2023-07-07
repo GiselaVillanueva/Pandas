@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @GiselaVillanueva
-- 👀 I’m interested in Data-oriented languages (R & Python)
+- 👀 In this project, I'm playing with Pandas 🐼
 - 🌱 I’m currently learning more about Pandas and Python for Data Science
 - 💞️ I’m looking to collaborate on any Data projects
 - 📫 How to reach me: gisela.v.villanueva@gmail.com
