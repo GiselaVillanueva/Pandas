@@ -1,0 +1,18 @@
+import pandas as pd
+
+cod_am_sur = {'Islas Malvinas': '500',
+              'Perú': '51',
+              'Argentina': '54',
+              'Brasil': '55',
+              'Chile': '56',
+              'Colombia': '57',
+              'Venezuela': '58',
+              'Bolivia': '591',
+              'Guyana': '592',
+              'Ecuador': '593',
+              'Guayana Francesa': '594',
+              'Paraguay': '595',
+              'Surinam': '597',
+              'Uruguay': '598'}
+
+ser_cod_am_sur = pd.Series(data = cod_am_sur, index = ['Islas Malvinas', 'Perú', 'Argentina', 'Brasil', 'Chile', 'Colombia', 'Venezuela', 'Bolivia', 'Guyana', 'Ecuador', 'Guayana Francesa', 'Paraguay', 'Surinam', 'Uruguay'])
