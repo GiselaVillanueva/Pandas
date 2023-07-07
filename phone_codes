@@ -10,8 +10,20 @@ cod_am_nor = {'pais': ['Canadá', 'Estados Unidos', 'Puerto Rico', 'México'],
 
 df_cod_am_nor = pd.DataFrame(cod_am_nor)
 
+#Joining DFs
 df_cod_am = pd.concat([df_cod_am_sur, df_cod_am_nor])
 
+#NAs?
 pd.DataFrame(df_cod_am).hasnans
 
+#Remove 'Puerto Rico'
 df_cod_am.pop('Puerto Rico')
+
+#DF's data type?
+print(type(df_cod_am))
+
+#'pais' column data type?
+print(type(df_cod_am['pais']))
+
+#Wanna know Argentina and Brasil's codes?
+df_cod_am[(df_cod_am['pais'] == 'Argentina') | (df_cod_am['pais'] == 'Brasil')]
