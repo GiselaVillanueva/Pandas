@@ -1,18 +1,17 @@
 import pandas as pd
 
-cod_am_sur = {'Islas Malvinas': '500',
-              'Perú': '51',
-              'Argentina': '54',
-              'Brasil': '55',
-              'Chile': '56',
-              'Colombia': '57',
-              'Venezuela': '58',
-              'Bolivia': '591',
-              'Guyana': '592',
-              'Ecuador': '593',
-              'Guayana Francesa': '594',
-              'Paraguay': '595',
-              'Surinam': '597',
-              'Uruguay': '598'}
+cod_am_sur = {'pais': ['Islas Malvinas', 'Perú', 'Argentina', 'Brasil', 'Chile', 'Colombia', 'Venezuela', 'Bolivia', 'Guyana', 'Ecuador', 'Guayana Francesa', 'Paraguay', 'Surinam', 'Uruguay'], 
+'cod': ['500', '51', '54', '55', '56', '57', '58', '591', '592', '593', '594', '595', '597', '598']}
 
-ser_cod_am_sur = pd.Series(data = cod_am_sur, index = ['Islas Malvinas', 'Perú', 'Argentina', 'Brasil', 'Chile', 'Colombia', 'Venezuela', 'Bolivia', 'Guyana', 'Ecuador', 'Guayana Francesa', 'Paraguay', 'Surinam', 'Uruguay'])
+df_cod_am_sur = pd.DataFrame(cod_am_sur)
+
+cod_am_nor = {'pais': ['Canadá', 'Estados Unidos', 'Puerto Rico', 'México'], 
+'cod': ['1', '1', '1-787', '52']}
+
+df_cod_am_nor = pd.DataFrame(cod_am_nor)
+
+df_cod_am = pd.concat([df_cod_am_sur, df_cod_am_nor])
+
+pd.DataFrame(df_cod_am).hasnans
+
+df_cod_am.pop('Puerto Rico')
